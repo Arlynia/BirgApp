@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { styles } from "../Styles/CalendearStyles.js";
 import { Calendar, CalendarList, Agenda } from "react-native-calendars";
+import COLORS from "../Utils/COLORS.js"
 
 // Define Color Constants
 const DARK_GREEN = "#394a51";

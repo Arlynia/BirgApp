@@ -7,13 +7,14 @@ import { ListScreen } from "./Screens/ListScreen.js";
 import { CalScreen } from "./Screens/CalScreen.js";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "./Styles/AppStyles.js";
+import COLORS from "./Utils/COLORS.js"
 
 const Tab = createBottomTabNavigator();
-// Define Color Constants
-const DARK_GREEN = "#394a51";
-const LIGHT_GREEN = "#7fa99b";
-const LIGHT_TAN = "#fbf2d5";
-const GOLD = "#fdc57b";
+// // Define Color Constants
+// const COLORS.DARK_GREEN = "#394a51";
+// const COLORS.LIGHT_GREEN = "#7fa99b";
+// const COLORS.LIGHT_TAN = "#fbf2d5";
+// const COLORS.GOLD = "#fdc57b";
 
 function Tabs() {
   return (
@@ -21,18 +22,18 @@ function Tabs() {
       initialRouteName="List"
       screenOptions={{
         headerStyle: {
-          backgroundColor: LIGHT_TAN,
+          backgroundColor: COLORS.LIGHT_TAN,
         },
-        tabBarActiveTintColor: GOLD,
-        tabBarInactiveTintColor: DARK_GREEN,
-        tabBarActiveBackgroundColor: LIGHT_GREEN,
-        tabBarInactiveBackgroundColor: LIGHT_GREEN,
+        tabBarActiveTintColor: COLORS.GOLD,
+        tabBarInactiveTintColor: COLORS.DARK_GREEN,
+        tabBarActiveBackgroundColor: COLORS.LIGHT_GREEN,
+        tabBarInactiveBackgroundColor: COLORS.LIGHT_GREEN,
         tabBarStyle: {
           height: 100,
           position: "absolute",
           
           paddingBotom: 0,
-          backgroundColor: LIGHT_GREEN,
+          backgroundColor: COLORS.LIGHT_GREEN,
           margin: 15,
           borderTopLeftRadius: 50,
           borderTopRightRadius: 50,

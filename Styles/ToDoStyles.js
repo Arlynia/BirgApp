@@ -23,13 +23,52 @@ export const styles = StyleSheet.create({
         marginTop: 40,
         top: -250,
         paddingLeft: 100,
-        
-
       },
       icon: {
-        marginTop: 20, // Adjust as needed to position the icon properly
+        marginTop: 20, 
         justifyContent: "flex-start",
         alignItems: "flex-start",
         flexDirection: 'column',
       },
+      appContainer: {
+        flex: 1,
+        paddingTop: 0,
+        paddingHorizontal: 16,
+      },
+      inputContainer: {
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: 10,
+        marginLeft: 2,
+        borderBottomWidth: 2,
+        borderBottomColor: LIGHT_GREEN,
+      },
+      TextInput: {
+        borderWidth: 1.5,
+        borderColor: DARK_GREEN,
+        width: "70%",
+        marginRight: 8,
+        padding: 8,
+        borderRadius: 5,
+        backgroundColor: LIGHT_TAN,
+      },
+      goalsContainer: {
+        flex: 5,
+      },
+      listItem: {
+        marginLeft: 1,
+        margin: 8,
+        borderRadius: 6,
+        backgroundColor: DARK_GREEN,
+        padding: 8,
+        color: "white",
+      },
+      goalText: {
+        color: GOLD,
+      },
+      buttonStyle: {
+        color: LIGHT_GREEN,
+      }
 })
