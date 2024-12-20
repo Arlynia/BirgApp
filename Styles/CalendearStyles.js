@@ -1,15 +1,10 @@
 import { StyleSheet } from "react-native";
-
-// Define Color Constants
-const DARK_GREEN = '#394a51';
-const LIGHT_GREEN = '#7fa99b';
-const LIGHT_TAN = '#fbf2d5';
-const GOLD = '#fdc57b';
+import COLORS from "../Utils/COLORS.js"
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: LIGHT_TAN,
+        backgroundColor: COLORS.LIGHT_TAN,
         alignItems: "center",
         justifyContent: "center",
       },
@@ -17,7 +12,7 @@ export const styles = StyleSheet.create({
         margin: 50,
         padding: 50,
         flex: 1,
-        color: DARK_GREEN,
+        color: COLORS.DARK_GREEN,
         fontSize: 50,
       },
       calendar: {

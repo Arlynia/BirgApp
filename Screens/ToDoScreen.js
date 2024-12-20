@@ -1,30 +1,29 @@
 // ToDoList.js
 import React from "react";
-import {
-  View,
-  FlatList,
-} from "react-native";
+import { View, FlatList } from "react-native";
 import { styles } from "../Styles/ToDoStyles.js";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
-import GoalItem  from '../Components/GoalItem'
+import GoalItem from "../Components/GoalItem";
 import GoalInput from "../Components/GoalInput";
 
-
-
 export function ToDoScreen() {
-  
   const [currentGoalsArray, setCurrentGoals] = useState([]);
 
   function addGoalHandler(enteredGoalText) {
     // console.log(enteredGoalText);
     setCurrentGoals((currentGoals) => [
       ...currentGoals,
-      { text: enteredGoalText, key: Math.random().toString() },
+      { text: enteredGoalText, id: Math.random().toString() },
     ]);
   }
 
-  function deleteGoalHandler() {}
+  function deleteGoalHandler(id) {
+    setCurrentGoals((currentGoals) => {
+      return currentGoals.filter((goal) => goal.id !== id);
+    });
+    console.log("[DEBUG]:Item Deleted...");
+  }
 
   return (
     <View style={styles.container}>
@@ -50,12 +49,18 @@ export function ToDoScreen() {
             renderItem={(itemData) => {
               // itemData.index
               return (
-               <GoalItem text={itemData.item.text}/>
+                
+                <GoalItem
+                  text={itemData.item.text}
+                  onDeleteItem={deleteGoalHandler}
+                  id={itemData.item.id}
+                />
               );
             }}
             keyExtractor={(item, index) => {
-              return item.key;
+              return item.id;
             }}
+            
           ></FlatList>
         </View>
       </View>

@@ -1,20 +1,15 @@
 import { StyleSheet } from "react-native";
-
-// Define Color Constants
-const DARK_GREEN = '#394a51';
-const LIGHT_GREEN = '#7fa99b';
-const LIGHT_TAN = '#fbf2d5';
-const GOLD = '#fdc57b';
+import COLORS from "../Utils/COLORS.js"
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: LIGHT_TAN,
+        backgroundColor: COLORS.LIGHT_TAN,
         justifyContent: 'flex-start',
         position: 'relative',
       },
       text: {
-        color: DARK_GREEN,
+        color: COLORS.DARK_GREEN,
         fontSize: 30,
         fontWeight: 'bold',
         textAlignVertical: 'center',
@@ -43,16 +38,16 @@ export const styles = StyleSheet.create({
         marginBottom: 10,
         marginLeft: 2,
         borderBottomWidth: 2,
-        borderBottomColor: LIGHT_GREEN,
+        borderBottomColor: COLORS.LIGHT_GREEN,
       },
       TextInput: {
         borderWidth: 1.5,
-        borderColor: DARK_GREEN,
+        borderColor: COLORS.DARK_GREEN,
         width: "70%",
         marginRight: 8,
         padding: 8,
         borderRadius: 5,
-        backgroundColor: LIGHT_TAN,
+        backgroundColor: COLORS.LIGHT_TAN,
       },
       goalsContainer: {
         flex: 5,
@@ -61,14 +56,14 @@ export const styles = StyleSheet.create({
         marginLeft: 1,
         margin: 8,
         borderRadius: 6,
-        backgroundColor: DARK_GREEN,
+        backgroundColor: COLORS.DARK_GREEN,
         padding: 8,
         color: "white",
       },
       goalText: {
-        color: GOLD,
+        color: COLORS.GOLD,
       },
       buttonStyle: {
-        color: LIGHT_GREEN,
+        color: COLORS.LIGHT_GREEN,
       }
 })

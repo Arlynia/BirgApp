@@ -4,11 +4,6 @@ import { styles } from "../Styles/CalendearStyles.js";
 import { Calendar, CalendarList, Agenda } from "react-native-calendars";
 import COLORS from "../Utils/COLORS.js"
 
-// Define Color Constants
-const DARK_GREEN = "#394a51";
-const LIGHT_GREEN = "#7fa99b";
-const LIGHT_TAN = "#fbf2d5";
-const GOLD = "#fdc57b";
 
 export function CalScreen() {
   return (
@@ -16,19 +11,19 @@ export function CalScreen() {
       <Calendar
         enableSwipeMonths
         theme={{
-          monthTextColor: DARK_GREEN,
+          monthTextColor: COLORS.DARK_GREEN,
           textMonthFontSize: 30,
           textMonthFontWeight: "thin",
-          arrowColor: DARK_GREEN,
-          calendarBackground: LIGHT_TAN,
-          dayTextColor: DARK_GREEN, // for the current month
-          textInactiveColor: GOLD,
-          textSectionTitleColor: LIGHT_GREEN,
+          arrowColor: COLORS.DARK_GREEN,
+          calendarBackground: COLORS.LIGHT_TAN,
+          dayTextColor: COLORS.DARK_GREEN, // for the current month
+          textInactiveColor:COLORS.GOLD,
+          textSectionTitleColor: COLORS.LIGHT_GREEN,
           textDayHeaderFontSize: 12,
           textDayHeaderFontFamily: 'Verdana',
           textDayFontWeight: "bold",
-          textDisabledColor: LIGHT_GREEN, // next month dates
-          todayTextColor: GOLD, // current date
+          textDisabledColor: COLORS. LIGHT_GREEN, // next month dates
+          todayTextColor:COLORS.GOLD, // current date
           textDayHeaderFontWeight: 'bold',
         }}
       ></Calendar>
