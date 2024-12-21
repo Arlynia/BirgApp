@@ -59,11 +59,33 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.DARK_GREEN,
         padding: 8,
         color: "white",
+        width: "100%",
       },
       goalText: {
         color: COLORS.GOLD,
       },
       buttonStyle: {
         color: COLORS.LIGHT_GREEN,
-      }
+      },
+      hiddenRow: {
+        alignItems: 'center',
+        backgroundColor: COLORS.GOLD,
+        flex: 1,
+        justifyContent: 'center',
+        paddingHorizontal: 10,
+        borderRadius: 6,
+        // height: 30,
+        width: '70%',
+        marginVertical: 10,
+
+      },
+      deleteText: {
+        color: COLORS.DARK_GREEN,
+        fontWeight: 'bold',
+        padding: 20,
+        margin: 25,
+        position: 'absolute',
+        fontSize: 18,
+
+      },
 })

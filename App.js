@@ -10,11 +10,6 @@ import { styles } from "./Styles/AppStyles.js";
 import COLORS from "./Utils/COLORS.js"
 
 const Tab = createBottomTabNavigator();
-// // Define Color Constants
-// const COLORS.DARK_GREEN = "#394a51";
-// const COLORS.LIGHT_GREEN = "#7fa99b";
-// const COLORS.LIGHT_TAN = "#fbf2d5";
-// const COLORS.GOLD = "#fdc57b";
 
 function Tabs() {
   return (
