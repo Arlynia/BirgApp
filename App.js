@@ -1,5 +1,6 @@
 // App.js
 import * as React from "react";
+import { KeyboardAvoidingView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { ToDoScreen } from "./Screens/ToDoScreen.js";
@@ -7,7 +8,9 @@ import { ListScreen } from "./Screens/ListScreen.js";
 import { CalScreen } from "./Screens/CalScreen.js";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "./Styles/AppStyles.js";
-import COLORS from "./Utils/COLORS.js"
+import { Platform } from "react-native";
+import COLORS from "./Utils/COLORS.js";
+import { ScrollView } from "react-native-gesture-handler";
 
 const Tab = createBottomTabNavigator();
 
@@ -23,22 +26,40 @@ function Tabs() {
         tabBarInactiveTintColor: COLORS.DARK_GREEN,
         tabBarActiveBackgroundColor: COLORS.LIGHT_GREEN,
         tabBarInactiveBackgroundColor: COLORS.LIGHT_GREEN,
+        keyboardHidesTabBar: false,
         tabBarStyle: {
-          height: 100,
-          position: "absolute",
-          
-          paddingBotom: 0,
-          backgroundColor: COLORS.LIGHT_GREEN,
-          margin: 15,
-          borderTopLeftRadius: 50,
-          borderTopRightRadius: 50,
-          borderBottomLeftRadius: 50,
-          borderBottomRightRadius: 50,
-          overflow: 'hidden',
-          shadowOffset: 15,
-          shadowColor: 'black',
-          shadowRadius: 15,
-          shadowOpacity: 1.0
+          ...Platform.select({
+            ios: {
+              height: 100,
+              position: "absolute",
+              paddingBotom: 0,
+              backgroundColor: COLORS.LIGHT_GREEN,
+              margin: 15,
+              borderTopLeftRadius: 50,
+              borderTopRightRadius: 50,
+              borderBottomLeftRadius: 50,
+              borderBottomRightRadius: 50,
+              overflow: "hidden",
+              shadowOffset: 15,
+              shadowColor: "black",
+              shadowRadius: 15,
+              shadowOpacity: 1.0,
+            },
+            android: {
+              height: 100,
+              width: 325,
+              position: "absolute",
+              paddingBottom: 0,
+              backgroundColor: COLORS.LIGHT_GREEN,
+              margin: 15,
+              borderTopLeftRadius: 100,
+              borderTopRightRadius: 100,
+              borderBottomLeftRadius: 100,
+              borderBottomRightRadius: 100,
+              overflow: "hidden",
+              elevation: 5,
+            },
+          }),
         },
         // tabBarItemStyle: {
         //   borderRadius: 25,
@@ -97,8 +118,15 @@ function Tabs() {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tabs></Tabs>
-    </NavigationContainer>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior="height"
+      enabled={false}
+    >
+        <NavigationContainer>
+          <Tabs></Tabs>
+        </NavigationContainer>
+
+    </KeyboardAvoidingView>
   );
 }

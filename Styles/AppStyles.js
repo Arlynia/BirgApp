@@ -18,10 +18,10 @@ export const styles = StyleSheet.create({
     fontSize: 50,
   },
   icons: {
-    width: 100,
-    height: 100,
+    width: 115,
+    height: 115,
     padding: 30,
-    marginTop: 50,
+    marginTop: 60,
     marginRight: 10,
   },
 });
