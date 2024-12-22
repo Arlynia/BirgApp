@@ -10,20 +10,15 @@ export const styles = StyleSheet.create({
     margin: 30,
     textAlign: "center",
     color: COLORS.DARK_GREEN,
-    fontSize: 35,
+    fontSize: 30,
     fontWeight: "bold",
-    margin: -175
+    margin: -175,
   },
   chloe: {
     height: 200,
     width: 100,
-    // resizeMode: "cover",
-    // alignItems: "flex-end",
   },
   transformImage: {
-    transform: [
-      { translateX: 275 }, // Move the image 100 units to the right
-      { translateY: 425 }, // Move the image 50 units down
-    ],
+    transform: [{ translateX: 275 }, { translateY: 425 }],
   },
 });

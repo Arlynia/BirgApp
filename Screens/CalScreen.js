@@ -27,7 +27,7 @@ export function CalScreen() {
           textDayHeaderFontWeight: 'bold',
         }}
       ></Calendar>
-      <Text style={styles.text}>Copy the ToDo List Here</Text>
+      <Text style={styles.text}>Show Tasks from Date Here</Text>
     </View>
   );
 }

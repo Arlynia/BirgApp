@@ -1,4 +1,4 @@
-// ToDoList.js
+// ToDoScreen.js
 import React from "react";
 import { View, FlatList } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -29,12 +29,6 @@ export function ToDoScreen() {
   return (
     <GestureHandlerRootView>
       <View style={styles.container}>
-        {/* <View style={styles.icon}>
-        <Ionicons  name="add-circle-outline" color={GOLD} size={125} />
-        <Ionicons  name="add-circle-outline" color={GOLD} size={125} />
-      </View>
-      <Text style={styles.text}>Add A Task</Text>
-      <Text style={styles.text}>Set A Reminder</Text> */}
         <View style={styles.appContainer}>
           <GoalInput onAddGoal={addGoalHandler}></GoalInput>
           <View style={styles.goalsContainer}>

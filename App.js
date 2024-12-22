@@ -5,14 +5,13 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 // Screens
 import { ToDoScreen } from "./Screens/ToDoScreen.js";
-import { ListScreen } from "./Screens/ListScreen.js";
+import { TailsScreen } from "./Screens/TailsScreen.js";
 import { CalScreen } from "./Screens/CalScreen.js";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "./Styles/AppStyles.js";
 import { Platform } from "react-native";
 // UI
 import COLORS from "./Utils/COLORS.js";
-
 
 const Tab = createBottomTabNavigator();
 
@@ -85,8 +84,8 @@ function Tabs() {
         }}
       ></Tab.Screen>
       <Tab.Screen
-        name="List"
-        component={ListScreen}
+        name="Tails Calculator"
+        component={TailsScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons
@@ -125,10 +124,9 @@ export default function App() {
       behavior="height"
       enabled={false}
     >
-        <NavigationContainer>
-          <Tabs></Tabs>
-        </NavigationContainer>
-
+      <NavigationContainer>
+        <Tabs></Tabs>
+      </NavigationContainer>
     </KeyboardAvoidingView>
   );
 }

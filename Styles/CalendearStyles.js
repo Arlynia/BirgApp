@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
         padding: 50,
         flex: 1,
         color: COLORS.DARK_GREEN,
-        fontSize: 50,
+        fontSize: 32,
       },
       calendar: {
         flex: 1,
