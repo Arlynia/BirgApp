@@ -3,14 +3,16 @@ import * as React from "react";
 import { KeyboardAvoidingView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+// Screens
 import { ToDoScreen } from "./Screens/ToDoScreen.js";
 import { ListScreen } from "./Screens/ListScreen.js";
 import { CalScreen } from "./Screens/CalScreen.js";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "./Styles/AppStyles.js";
 import { Platform } from "react-native";
+// UI
 import COLORS from "./Utils/COLORS.js";
-import { ScrollView } from "react-native-gesture-handler";
+
 
 const Tab = createBottomTabNavigator();
 
