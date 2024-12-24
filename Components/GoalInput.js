@@ -1,7 +1,7 @@
 import { View, TextInput, Button } from "react-native";
 import { styles } from "../Styles/ToDoStyles.js";
 import { useState } from "react";
-import COLORS from "./Utils/COLORS.js";
+import COLORS from "../Utils/COLORS.js";
 
 function GoalInput(props) {
   const [enteredGoalText, setEnteredGoalText] = useState("");
