@@ -3,7 +3,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { KeyboardAvoidingView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Asset } from 'expo-asset';
 // Screens
 import { ToDoScreen } from "./Screens/ToDoScreen.js";
 import { TailsScreen } from "./Screens/TailsScreen.js";
@@ -120,19 +119,13 @@ function Tabs() {
 }
 
 export default function App() {
- 
-  // const [appIsReady, setAppIsReady] = useState(false);
   useEffect(() => {
-    // Prevent the splash screen from disappearing automatically
     SplashScreen.preventAutoHideAsync();
     console.log("Splash screen is being shown...");
-    // Simulate an asynchronous task (e.g., fetching data)
     setTimeout(async () => {
-      
-      // Hide the splash screen once the task is complete
       await SplashScreen.hideAsync();
       console.log("Splash screen hidden.");
-    }, 3000); // Show the splash screen for 3 seconds
+    }, 3000);
   }, []);
 
 

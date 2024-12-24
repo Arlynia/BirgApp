@@ -86,6 +86,5 @@ export const styles = StyleSheet.create({
         margin: 25,
         position: 'absolute',
         fontSize: 18,
-
       },
 })
