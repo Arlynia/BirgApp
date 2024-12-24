@@ -1,12 +1,7 @@
 import { View, TextInput, Button } from "react-native";
 import { styles } from "../Styles/ToDoStyles.js";
 import { useState } from "react";
-
-// Define Color Constants
-const DARK_GREEN = "#394a51";
-const LIGHT_GREEN = "#7fa99b";
-const LIGHT_TAN = "#fbf2d5";
-const GOLD = "#fdc57b";
+import COLORS from "./Utils/COLORS.js";
 
 function GoalInput(props) {
   const [enteredGoalText, setEnteredGoalText] = useState("");
@@ -34,7 +29,7 @@ function GoalInput(props) {
         style={styles.buttonStyle}
         title="Add Goal"
         onPress={addGoalHandler}
-        color={DARK_GREEN}
+        color={COLORS.DARK_GREEN}
       />
     </View>
   );
