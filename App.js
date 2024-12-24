@@ -1,8 +1,9 @@
 // App.js
-import * as React from "react";
+import React, { useEffect, useState, useCallback } from 'react';
 import { KeyboardAvoidingView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Asset } from 'expo-asset';
 // Screens
 import { ToDoScreen } from "./Screens/ToDoScreen.js";
 import { TailsScreen } from "./Screens/TailsScreen.js";
@@ -10,6 +11,7 @@ import { CalScreen } from "./Screens/CalScreen.js";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "./Styles/AppStyles.js";
 import { Platform } from "react-native";
+import * as SplashScreen from 'expo-splash-screen';
 // UI
 import COLORS from "./Utils/COLORS.js";
 
@@ -18,7 +20,7 @@ const Tab = createBottomTabNavigator();
 function Tabs() {
   return (
     <Tab.Navigator
-      initialRouteName="List"
+      initialRouteName="Calendar"
       screenOptions={{
         headerStyle: {
           backgroundColor: COLORS.LIGHT_TAN,
@@ -118,6 +120,22 @@ function Tabs() {
 }
 
 export default function App() {
+ 
+  // const [appIsReady, setAppIsReady] = useState(false);
+  useEffect(() => {
+    // Prevent the splash screen from disappearing automatically
+    SplashScreen.preventAutoHideAsync();
+    console.log("Splash screen is being shown...");
+    // Simulate an asynchronous task (e.g., fetching data)
+    setTimeout(async () => {
+      
+      // Hide the splash screen once the task is complete
+      await SplashScreen.hideAsync();
+      console.log("Splash screen hidden.");
+    }, 3000); // Show the splash screen for 3 seconds
+  }, []);
+
+
   return (
     <KeyboardAvoidingView
       style={styles.container}

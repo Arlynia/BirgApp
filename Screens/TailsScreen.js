@@ -12,17 +12,8 @@ export function TailsScreen({ goals }) {
         source={require("../assets/Chloe.png")}
         style={[styles.chloe, styles.transformImage]}
       ></Image>
-
       <Text style={styles.text}>Wondrous Tails Calculator</Text>
-      <FlatList
-        data={goals}
-        renderItem={({ item }) => (
-          <View styles={styles.textItem}>
-            <Text>{item.text}</Text>
-          </View>
-        )}
-        keyExtractor={(item) => item.id}
-      ></FlatList>
+
     </View>
   );
 }
