@@ -6,4 +6,6 @@ const COLORS = {
     GOLD : "#fdc57b",
 };
 
+const GOAL_COLORS = [COLORS.GOLD, COLORS.LIGHT_TAN, COLORS.DARK_GREEN];
+
 export default COLORS;
