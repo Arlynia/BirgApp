@@ -54,4 +54,10 @@ export const styles = StyleSheet.create({
     color: COLORS.GOLD,
     fontSize: 18,
   },
+  stickersStyle:{
+    height: 60,
+    width: 60,
+    resizeMode: 'contain',
+    transform: [{ translateX: 30 }, { translateY: -131 }],
+  },
 });

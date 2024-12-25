@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity, Alert } from "react-native";
 import { styles } from "../Styles/TailsStyles.js";
+import STICKER_SHEET from "../Utils/STICKER_SHEET.js"
 
 export function TailsScreen({}) {
   const [tailsBook, setTailsBook] = useState(() => Array(16).fill(null));
@@ -72,6 +73,9 @@ export function TailsScreen({}) {
       <TouchableOpacity style={styles.resetButton} onPress={resetGame}>
         <Text style={styles.resetText}>Reset Game</Text>
       </TouchableOpacity>
+      <Image
+        source={STICKER_SHEET[0]} style={styles.stickersStyle}>
+      </Image>
     </View>
   );
 }
